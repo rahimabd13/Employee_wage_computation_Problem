@@ -10,8 +10,8 @@ namespace EmployeeManagement
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World");
-            EmployeeAttendance.GetAttendance();
+            
+            EmployeeDailyWage.GetDailyWage();
             
         }
     }
