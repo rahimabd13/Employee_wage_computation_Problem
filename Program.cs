@@ -11,7 +11,7 @@ namespace EmployeeManagement
         static void Main(string[] args)
         {
             
-            EmployeeDailyWageSwitchcase.switchcase();
+            EmployeeMonthlyWage.GetMonthlyWage();
             
         }
     }
