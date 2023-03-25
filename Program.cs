@@ -10,9 +10,9 @@ namespace EmployeeManagement
     {
         static void Main(string[] args)
         {
-            
-            EmployeeMonthlyWage.GetMonthlyWage();
-            
+
+           EmployeeMonthlyWageCondition.GetMonthlyWage(); //UC6
+
         }
     }
 }

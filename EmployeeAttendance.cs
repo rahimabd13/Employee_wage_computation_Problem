@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement
 {
-    class EmployeeMonthlyWage  //UC5
+    class EmployeeMonthlyWageCondition  //UC6
     {
         const int IS_FULL_TIME = 1;
         const int IS_Part_Time = 2;
         const int EMP_RATE_PER_HOUR = 20;
-        const int Working_Days = 20;
+        const int WORKING_DAYS = 20;
+        const int Max_HRS_IN_MONTH = 100;
 
         public static void GetMonthlyWage()
         {
            
             int empHrs = 0;
-            int empWage = 0;
-            int total_emp_Wage = 0;
-            for (int i = 1; i <= Working_Days; i++)
+            int totalEmpWage = 0;
+            int totalEmpHrs = 0;
+            int totalWorkingDays = 0;
+            while (totalEmpHrs <= Max_HRS_IN_MONTH || totalWorkingDays <= 20)
             {
-
+                totalWorkingDays++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -37,10 +39,11 @@ namespace EmployeeManagement
                         empHrs = 0;
                         break;
                 }
-                empWage = empHrs * EMP_RATE_PER_HOUR;
-                total_emp_Wage += empWage;
+                totalEmpHrs += empHrs;
+                Console.WriteLine("Day :" + (totalWorkingDays) + ",Emp Working Hrs :" + empHrs);
             }
-            Console.WriteLine("Employee Wage Per Month:" + total_emp_Wage);
+            totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("Total Emp Wage For the Month :" +totalEmpWage);
             Console.ReadLine();
         }
     }
