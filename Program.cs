@@ -11,7 +11,7 @@ namespace EmployeeManagement
         static void Main(string[] args)
         {
 
-           EmployeeMonthlyWageCondition.GetMonthlyWage(); //UC6
+           EmployeeMonthlyWageCondition.EmpComputeWage(); //UC7
 
         }
     }
